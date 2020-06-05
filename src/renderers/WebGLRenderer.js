@@ -719,7 +719,7 @@ function WebGLRenderer( parameters ) {
 
 		if ( scene === null ) scene = tempScene; // renderBufferDirect second parameter used to be fog (could be null)
 
-		var frontFaceCW = ( object.isMesh && object.matrixWorld.determinant() < 0 );
+		var frontFaceCW = ( object.isMesh && object.normalMatrix.determinant() < 0 );
 
 		var program = setProgram( camera, scene, material, object );
 
