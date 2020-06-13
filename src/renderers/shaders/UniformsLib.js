@@ -98,7 +98,9 @@ var UniformsLib = {
 	},
 
 	fog: {
-
+		
+		fogTexture: { value: null },
+		invViewportSize: { value: new Vector2(0, 0) },
 		fogDensity: { value: 0.00025 },
 		fogNear: { value: 1 },
 		fogFar: { value: 2000 },

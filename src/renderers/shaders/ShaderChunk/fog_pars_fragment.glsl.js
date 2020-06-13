@@ -8,6 +8,12 @@ export default /* glsl */`
 
 		uniform float fogDensity;
 
+	#elif defined(FOG_ENVIRONMENT)
+
+		uniform float fogDensity;
+		uniform vec2 invViewportSize;
+		uniform sampler2D fogTexture;
+
 	#else
 
 		uniform float fogNear;

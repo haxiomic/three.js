@@ -454,6 +454,7 @@ function WebGLProgram( renderer, cacheKey, parameters ) {
 			'#define MAX_BONES ' + parameters.maxBones,
 			( parameters.useFog && parameters.fog ) ? '#define USE_FOG' : '',
 			( parameters.useFog && parameters.fogExp2 ) ? '#define FOG_EXP2' : '',
+			( parameters.useFog && parameters.fogEnvironment ) ? '#define FOG_ENVIRONMENT' : '',
 
 			parameters.map ? '#define USE_MAP' : '',
 			parameters.envMap ? '#define USE_ENVMAP' : '',
@@ -580,6 +581,7 @@ function WebGLProgram( renderer, cacheKey, parameters ) {
 
 			( parameters.useFog && parameters.fog ) ? '#define USE_FOG' : '',
 			( parameters.useFog && parameters.fogExp2 ) ? '#define FOG_EXP2' : '',
+			( parameters.useFog && parameters.fogEnvironment ) ? '#define FOG_ENVIRONMENT' : '',
 
 			parameters.map ? '#define USE_MAP' : '',
 			parameters.matcap ? '#define USE_MATCAP' : '',

@@ -2275,6 +2275,12 @@ function WebGLRenderer( parameters ) {
 
 			uniforms.fogDensity.value = fog.density;
 
+		} else if ( fog.isFogEnvironment ) {
+
+			uniforms.fogDensity.value = fog.density;
+			uniforms.fogTexture.value = fog.texture;
+			uniforms.invViewportSize.value.set(1/(_currentViewport.z * _pixelRatio), 1/(_currentViewport.w * _pixelRatio));
+
 		}
 
 	}

@@ -7,6 +7,7 @@ export * from './renderers/shaders/ShaderLib';
 export * from './renderers/shaders/UniformsLib';
 export * from './renderers/shaders/UniformsUtils';
 export * from './renderers/shaders/ShaderChunk';
+export * from './scenes/FogEnvironment';
 export * from './scenes/FogExp2';
 export * from './scenes/Fog';
 export * from './scenes/Scene';

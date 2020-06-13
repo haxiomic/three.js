@@ -55,6 +55,8 @@ export let UniformsLib: {
 		gradientMap: IUniform;
 	};
 	fog: {
+		fogTexture: IUniform,
+		invViewportSize: IUniform,
 		fogDensity: IUniform;
 		fogNear: IUniform;
 		fogFar: IUniform;
