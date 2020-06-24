@@ -1694,7 +1694,7 @@ function WebGLRenderer( parameters ) {
 
 			if ( fog && material.fog ) {
 
-				materials.refreshFogUniforms( m_uniforms, fog );
+				materials.refreshFogUniforms( m_uniforms, fog, _currentViewport, _pixelRatio );
 
 			}
 

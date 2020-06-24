@@ -6,7 +6,7 @@ import { BackSide } from "../../constants.js";
 
 function WebGLMaterials( properties ) {
 
-	function refreshFogUniforms( uniforms, fog ) {
+	function refreshFogUniforms( uniforms, fog, currentViewport, pixelRatio ) {
 
 		uniforms.fogColor.value.copy( fog.color );
 
@@ -23,7 +23,7 @@ function WebGLMaterials( properties ) {
 
 			uniforms.fogDensity.value = fog.density;
 			uniforms.fogTexture.value = fog.texture;
-			uniforms.invViewportSize.value.set(1/(_currentViewport.z * _pixelRatio), 1/(_currentViewport.w * _pixelRatio));
+			uniforms.invViewportSize.value.set(1/(currentViewport.z * pixelRatio), 1/(currentViewport.w * pixelRatio));
 
 		}
 
