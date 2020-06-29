@@ -1252,7 +1252,9 @@ function WebGLRenderer( parameters ) {
 
 					if ( object.layers.test( camera2.layers ) ) {
 
-						state.viewport( _currentViewport.copy( camera2.viewport ) );
+						if (camera2.viewport != null) {
+							state.viewport( _currentViewport.copy( camera2.viewport ) );
+						}
 
 						currentRenderState.setupLights( camera2 );
 
