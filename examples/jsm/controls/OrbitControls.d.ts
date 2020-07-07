@@ -1,4 +1,4 @@
-import { Camera, MOUSE, TOUCH, Vector3 } from '../../../src/Three';
+import { Camera, MOUSE, TOUCH, Vector3, Vector2 } from '../../../src/Three';
 
 export class OrbitControls {
 
@@ -68,6 +68,9 @@ export class OrbitControls {
 	removeEventListener( type: string, listener: ( event: any ) => void ): void;
 
 	dispatchEvent( event: { type: string; target: any; } ): void;
+
+	// @! haxiomic custom method
+	applyConstraints( position: Vector3 ): void;
 
 }
 

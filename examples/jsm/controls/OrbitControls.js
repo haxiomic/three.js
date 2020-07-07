@@ -114,6 +114,9 @@ var OrbitControls = function ( object, domElement ) {
 
 	};
 
+	this.applyConstraints = function(position) {
+	};
+
 	this.saveState = function () {
 
 		scope.target0.copy( scope.target );
@@ -235,6 +238,8 @@ var OrbitControls = function ( object, domElement ) {
 			offset.applyQuaternion( quatInverse );
 
 			position.copy( scope.target ).add( offset );
+
+			this.applyConstraints(position);
 
 			scope.object.lookAt( scope.target );
 
