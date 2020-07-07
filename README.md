@@ -3,3 +3,4 @@
 - Add FogEnvironment
 - Don't require .viewport on ArrayCameras
 - Skip both null and undefined scene.overrideMaterial
+- Add applyConstraints method to Orbit controls
